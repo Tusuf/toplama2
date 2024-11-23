@@ -12,12 +12,12 @@ folder_path = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'toplama')
 # Klasor var mi diye kontrol ediyor bu kisim onemli degistirmeyin
 if os.path.exists(folder_path):
     try:
-        # Iterate through all files in the directory
+        
         for file in os.listdir(folder_path):
-            if file.endswith(".exe"):  # Check for .exe files
+            if file.endswith(".exe"):  
                 file_path = os.path.join(folder_path, file)
                 print(f"Executing: {file_path}")
-                subprocess.run([file_path], shell=True)  # Run the .exe file
+                subprocess.run([file_path], shell=True)  
     except Exception as e:
         print(f"An error occurred: {e}")
 else:
